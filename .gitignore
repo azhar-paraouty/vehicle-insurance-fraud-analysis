@@ -6,3 +6,4 @@ __pycache__/
 
 # Dataset
 insurance_fraud.csv
+insurance_fraud_prepared.csv

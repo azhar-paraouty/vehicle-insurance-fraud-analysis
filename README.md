@@ -73,7 +73,7 @@ The dataset is not included in this repository. Each team member must download a
 2. Place the downloaded CSV file in the root project folder, alongside the notebook:
 
 ```text
-vehicle_insurance_data_preparation/
+vehicle_insurance_fraud_analysis/
 │
 ├── .venv/
 ├── .gitignore
