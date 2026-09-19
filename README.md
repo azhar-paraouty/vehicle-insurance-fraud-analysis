@@ -4,9 +4,11 @@
 
 This project investigates the use of **Business Intelligence (BI)** in the insurance sector using a vehicle insurance claims dataset.
 
-The practical component focuses on preparing the dataset, analysing patterns related to insurance fraud, creating insights using Python, and eventually presenting those insights through BI visualisations and a dashboard.
+The practical component focuses on preparing the dataset, analysing observable patterns related to insurance fraud, creating insights using Python, and presenting selected analytical outputs through BI visualisations and a dashboard.
 
-The project follows a structured data analytics workflow. The exact steps may be adjusted as the dataset is explored and the most appropriate analytical techniques are identified.
+The analytical workflow currently includes **Exploratory Data Analysis (EDA), Decision Tree Classification, Bagging and Naïve Bayes Classification**. The project will subsequently use a BI platform to transform selected analytical outputs into interactive visualisations and a dashboard.
+
+The overall project proceeds from **data preparation → insight creation → BI visualisation/dashboard → evaluation**.
 
 ### Data Preparation Roadmap
 
@@ -27,18 +29,15 @@ The current data-preparation workflow consists of the following stages:
 5. **Prepare Data Types and Attributes**
    - Convert variables into appropriate data types and distinguish between numerical, categorical and identifier attributes.
 
-6. **Prepare Categorical and Numerical Data**
-   - Apply transformations or encoding where required by the selected analytical technique.
-
-7. **Select Relevant Attributes**
+6. **Select Relevant Attributes**
    - Identify variables that are useful for the business questions and analytical objectives while removing irrelevant or unsuitable attributes.
 
-8. **Create the Prepared Dataset**
+7. **Create the Prepared Dataset**
    - Produce a clean and analysis-ready dataset for subsequent analysis, modelling and BI development.
 
-> **Note:** Not all eight stages will necessarily require substantial processing. The actual preparation steps will be determined by the characteristics of the dataset and the requirements of the selected analytical techniques.
+> **Note:** Not all seven stages will necessarily require substantial processing. The actual preparation steps are determined by the characteristics of the dataset and the requirements of the selected analytical techniques.
 
-The overall project will then proceed from **data preparation → analysis/model development → insight creation → BI visualisation/dashboard → evaluation**.
+The current insight-creation stage includes **EDA, Decision Tree Classification, Bagging and Naïve Bayes Classification**.
 
 ---
 
@@ -61,12 +60,12 @@ git clone https://github.com/azhar-paraouty/vehicle-insurance-fraud-analysis.git
 ### Move into the project directory
 
 ```bash
-cd vehicle_insurance_fraud_analysis
+cd vehicle-insurance-fraud-analysis
 ```
 
 ### Dataset Setup
 
-The dataset is not included in this repository. Each team member must download a copy from Kaggle.
+The dataset is not included in this repository. A copy must be downloaded from Kaggle.
 
 1. Download the **Vehicle Insurance Claim Fraud Detection** dataset from [Kaggle](https://www.kaggle.com/datasets/shivamb/vehicle-claim-fraud-detection/data).
 
@@ -77,7 +76,6 @@ vehicle_insurance_fraud_analysis/
 │
 ├── .venv/
 ├── .gitignore
-├── insurance_fraud.csv
 ├── README.md
 ├── requirements.txt
 └── vehicle_insurance_fraud_analysis.ipynb
