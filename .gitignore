@@ -1,9 +1,11 @@
 # Virtual environment
 .venv/
 
-# Python cache
+# Python
 __pycache__/
+*.pkl
 
-# Dataset
+# Dataset and other csv files
 insurance_fraud.csv
 insurance_fraud_prepared.csv
+model_results.csv

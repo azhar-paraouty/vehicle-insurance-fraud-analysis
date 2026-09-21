@@ -6,9 +6,9 @@ This project investigates the use of **Business Intelligence (BI)** in the insur
 
 The practical component focuses on preparing the dataset, analysing observable patterns related to insurance fraud, creating insights using Python, and presenting selected analytical outputs through BI visualisations and a dashboard.
 
-The analytical workflow currently includes **Exploratory Data Analysis (EDA), Decision Tree Classification, Bagging and Naïve Bayes Classification**. The project will subsequently use a BI platform to transform selected analytical outputs into interactive visualisations and a dashboard.
+The analytical workflow includes **Exploratory Data Analysis (EDA), Decision Tree Classification, Bagging and Naïve Bayes Classification**. The project uses **Tableau** as the BI platform to transform selected analytical outputs into interactive visualisations and a dashboard.
 
-The overall project proceeds from **data preparation → insight creation → BI visualisation/dashboard → evaluation**.
+The overall project proceeds from **data preparation → insight creation → BI visualisation/dashboard → claim assessment application → evaluation**.
 
 ### Data Preparation Roadmap
 
@@ -36,8 +36,6 @@ The current data-preparation workflow consists of the following stages:
    - Produce a clean and analysis-ready dataset for subsequent analysis, modelling and BI development.
 
 > **Note:** Not all seven stages will necessarily require substantial processing. The actual preparation steps are determined by the characteristics of the dataset and the requirements of the selected analytical techniques.
-
-The current insight-creation stage includes **EDA, Decision Tree Classification, Bagging and Naïve Bayes Classification**.
 
 ---
 
@@ -69,22 +67,26 @@ The dataset is not included in this repository. A copy must be downloaded from K
 
 1. Download the **Vehicle Insurance Claim Fraud Detection** dataset from [Kaggle](https://www.kaggle.com/datasets/shivamb/vehicle-claim-fraud-detection/data).
 
-2. Place the downloaded CSV file in the root project folder, alongside the notebook:
-
-```text
-vehicle_insurance_fraud_analysis/
-│
-├── .venv/
-├── .gitignore
-├── README.md
-├── requirements.txt
-└── vehicle_insurance_fraud_analysis.ipynb
-```
+2. Place the downloaded CSV file in the project root directory.
 
 3. Rename the downloaded CSV file to:
 
 ```
 insurance_fraud.csv
+```
+
+The project directory should initially contain:
+
+```text
+vehicle_insurance_fraud_analysis/
+│
+├── .gitignore
+├── README.md
+├── requirements.txt
+├── insurance_fraud.csv
+├── vehicle_insurance_fraud_analysis.ipynb
+├── claim_assessment.py
+└── insurance_fraud_bi_dashboard.png
 ```
 
 ### Create a Python virtual environment
@@ -107,10 +109,21 @@ Install the required Python packages:
 python -m pip install -r requirements.txt
 ```
 
-### Select the Python Kernel
+### Run the Notebook
 
-When opening the Jupyter notebook in VS Code:
-1. Open the notebook.
-2. Select Kernel in the top-right corner.
-3. Select the project's `.venv` Python environment.
-4. Run the notebook cells.
+Open `vehicle_insurance_fraud_analysis.ipynb` in VS Code.
+1. Select Kernel in the top-right corner.
+2. Select the project's `.venv` Python environment.
+3. Run the notebook cells.
+
+> The notebook performs the project's data preparation, insight creation and model development activities.
+
+### Run the Streamlit Application
+
+After the notebook has been run and the required model files have been generated, the claim assessment application can be started with:
+
+```bash
+streamlit run claim_assessment.py
+```
+
+> The application runs locally at http://localhost:8501/
