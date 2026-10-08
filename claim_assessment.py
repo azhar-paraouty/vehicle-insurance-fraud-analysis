@@ -44,23 +44,23 @@ selected_model = st.selectbox(
 if selected_model == "Decision Tree":
 
     st.success(
-        "Decision Tree selected for primary deployment. "
+        "Decision Tree selected. "
         "It achieved the highest sensitivity among the three models "
         "on the test set."
     )
 
 elif selected_model == "Bagging":
 
-    st.error(
-        "Bagging was not selected for primary deployment. "
+    st.info(
+        "Bagging selected. "
         "It achieved lower sensitivity than the Decision Tree "
         "on the test set."
     )
 
 else:
 
-    st.error(
-        "Naïve Bayes was not selected for primary deployment. "
+    st.info(
+        "Naïve Bayes selected. "
         "It achieved lower sensitivity than the Decision Tree "
         "on the test set."
     )
